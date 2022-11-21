@@ -1,0 +1,23 @@
+# @author : microfat
+# @time   : 11/20/22 19:52:38
+# @File   : docker-compose.yml
+
+services: 
+    falsk-apscheduler-test:
+        image: falsk-apscheduler-test:1.0
+        container_name: falsk-apscheduler-test
+        build:
+            context: .
+            dockerfile: Services/falsk-apscheduler-test/Dockerfile
+        volumes:
+            - logs:/vol
+            - ./:/app
+        ports:
+            - 8000:8000
+        privileged: true
+        sysctls:
+            net.core.somaxconn: '2000'
+        restart: always
+
+volumes: 
+    logs:

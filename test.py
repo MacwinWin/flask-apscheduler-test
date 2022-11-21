@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @author : microfat
+# @time   : 11/21/22 14:06:13
+# @File   : test.py
+
 from flask import Flask
 import datetime
 from flask_apscheduler import APScheduler
@@ -12,14 +18,16 @@ class Config(object):
             'func': 'test:task',
             'args': (1, 2),
             'trigger': 'interval',
-            'seconds': 10
+            'seconds': 10,
         }
     ]
     SCHEDULER_API_ENABLED = True
 
 
 def task(a, b):
-    print(str(datetime.datetime.now()) + ' execute task ' + '{}+{}={}'.format(a, b, a + b))
+    print(
+        str(datetime.datetime.now()) + ' execute task ' + '{}+{}={}'.format(a, b, a + b)
+    )
 
 
 if __name__ == '__main__':

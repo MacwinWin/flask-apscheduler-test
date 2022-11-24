@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author : microfat
-# @time   : 11/20/22 20:18:03
+# @time   : 11/24/22 09:03:56
 # @File   : config.py
+
+import datetime
+
+from flask_apscheduler import APScheduler
+
+scheduler = APScheduler()
 
 
 class Config(object):
     JOBS = [
         {
             'id': 'job1',
-            'func': 'test:task',
+            'func': 'module.test:task',
             'args': (1, 2),
             'trigger': 'interval',
             'seconds': 10,
+            'start_date': datetime.datetime.now(),
         }
     ]
     SCHEDULER_API_ENABLED = True

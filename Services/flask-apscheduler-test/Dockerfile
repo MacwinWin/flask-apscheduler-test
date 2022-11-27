@@ -28,10 +28,10 @@ WORKDIR /app
 
 # 安装项目环境
 RUN rm -Rf /app/__pycache__ \
-    && cat /app/Services/falsk-apscheduler-test/requirements.txt | xargs -n 1 -L 1 pip3 --default-timeout=1000 install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    && cat /app/Services/flask-apscheduler-test/requirements.txt | xargs -n 1 -L 1 pip3 --default-timeout=1000 install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple \
     #&& python3 /app/setup.py build_ext --inplace \
     && apt-get purge -y --auto-remove gcc make \
     && rm -rf /var/lib/apt/lists/* 
 
 #ENTRYPOINT ["/bin/sh"]
-ENTRYPOINT ["supervisord", "-n", "-c", "/app/Services/falsk-apscheduler-test/supervisord.conf"]
+ENTRYPOINT ["supervisord", "-n", "-c", "/app/Services/flask-apscheduler-test/supervisord.conf"]

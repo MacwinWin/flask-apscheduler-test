@@ -19,14 +19,14 @@ tags:
   description: 调度器相关
 - name: job
   description: 作业相关
-paths:
+paths: 
   /custom/scheduler/pause:
     post:
       tags:
       - scheduler
       summary: 暂停调度器
       description: 暂停调度器
-      operationId: post_scheduler_pause
+      operationId: postSchedulerPause
       requestBody:
         $ref: '#/components/requestBodies/post-scheduler-pause'
       responses:
@@ -38,19 +38,16 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.scheduler_controller
   /custom/scheduler/resume:
     post:
       tags:
       - scheduler
       summary: 恢复调度器
       description: 恢复调度器
-      operationId: post_scheduler_resume
+      operationId: postSchedulerResume
       requestBody:
         $ref: '#/components/requestBodies/post-scheduler-resume'
       responses:
@@ -62,19 +59,17 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.scheduler_controller
+
   /custom/scheduler/jobs:
     post:
       tags:
       - job
       summary: 添加作业
       description: 添加作业
-      operationId: post_jobs
+      operationId: postJobs
       requestBody:
         $ref: '#/components/requestBodies/post-jobs'
       responses:
@@ -86,29 +81,25 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.job_controller
+
   /custom/scheduler/jobs/{job_id}/remove:
     post:
       tags:
       - job
       summary: 删除作业
       description: 删除作业
-      operationId: post_jobs_remove
+      operationId: postJobsRemove
       parameters:
-      - name: job_id
-        in: path
-        description: 任务ID
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          example: job1
+        - in: path
+          name: job_id
+          description: 任务ID
+          required: true
+          schema:
+            type: string
+            example: 'job1'
       requestBody:
         $ref: '#/components/requestBodies/post-jobs-remove'
       responses:
@@ -120,29 +111,24 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.job_controller
   /custom/scheduler/jobs/{job_id}:
     patch:
       tags:
       - job
       summary: 更新作业
       description: 更新作业
-      operationId: patch_jobs
+      operationId: patchJobs
       parameters:
-      - name: job_id
-        in: path
-        description: 任务ID
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          example: job1
+        - in: path
+          name: job_id
+          description: 任务ID
+          required: true
+          schema:
+            type: string
+            example: 'job1'
       requestBody:
         $ref: '#/components/requestBodies/patch-jobs'
       responses:
@@ -154,29 +140,24 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.job_controller
   /custom/scheduler/jobs/{job_id}/pause:
     post:
       tags:
       - job
       summary: 暂停某个作业
       description: 暂停某个作业
-      operationId: post_jobs_pause
+      operationId: postJobsPause
       parameters:
-      - name: job_id
-        in: path
-        description: 任务ID
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          example: job1
+        - in: path
+          name: job_id
+          description: 任务ID
+          required: true
+          schema:
+            type: string
+            example: 'job1'
       requestBody:
         $ref: '#/components/requestBodies/post-jobs-pause'
       responses:
@@ -188,29 +169,24 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.job_controller
   /custom/scheduler/jobs/{job_id}/resume:
     post:
       tags:
       - job
       summary: 恢复某个作业
       description: 恢复某个作业
-      operationId: post_jobs_resume
+      operationId: postJobsResume
       parameters:
-      - name: job_id
-        in: path
-        description: 任务ID
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          example: job1
+        - in: path
+          name: job_id
+          description: 任务ID
+          required: true
+          schema:
+            type: string
+            example: 'job1'
       requestBody:
         $ref: '#/components/requestBodies/post-jobs-resume'
       responses:
@@ -222,29 +198,24 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.job_controller
   /custom/scheduler/jobs/{job_id}/run:
     post:
       tags:
       - job
       summary: 执行某个作业
       description: 执行某个作业
-      operationId: post_jobs_run
+      operationId: postJobsRun
       parameters:
-      - name: job_id
-        in: path
-        description: 任务ID
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          example: job1
+        - in: path
+          name: job_id
+          description: 任务ID
+          required: true
+          schema:
+            type: string
+            example: 'job1'
       requestBody:
         $ref: '#/components/requestBodies/post-jobs-run'
       responses:
@@ -256,48 +227,142 @@ paths:
                 $ref: '#/components/responses/general'
               examples:
                 "200":
-                  value: null
                   $ref: '#/components/examples/general-200'
                 "500":
-                  value: null
                   $ref: '#/components/examples/general-500'
-      x-openapi-router-controller: swagger_server.controllers.job_controller
+
 components:
   schemas:
     post-scheduler-requestbody:
       required:
-      - log
+        - log
       type: object
       properties:
         log:
-          $ref: '#/components/schemas/postschedulerrequestbody_log'
+          type: object
+          required:
+            - "appId"
+            - "entryId"
+            - "dataId"
+          properties:
+            appId:
+              type: string
+              description: 应用ID
+            entryId:
+              type: string
+              description: 表单ID
+            dataId:
+              type: string
+              description: 数据ID
     post-jobs-requestbody:
       required:
-      - job
-      - log
+        - log
+        - job
       type: object
       properties:
         log:
-          $ref: '#/components/schemas/postschedulerrequestbody_log'
+          type: object
+          required:
+            - "appId"
+            - "entryId"
+            - "dataId"
+          properties:
+            appId:
+              type: string
+              description: 应用ID
+            entryId:
+              type: string
+              description: 表单ID
+            dataId:
+              type: string
+              description: 数据ID
         job:
-          $ref: '#/components/schemas/postjobsrequestbody_job'
+          type: object
+          required:
+            - "id"
+            - "func"
+            - "args"
+            - "trigger"
+          properties:
+            id:
+              type: string
+              description: 作业ID
+            func:
+              type: string
+              description: 作业函数
+            args:
+              type: array
+              description: 参数列表
+              items: 
+                anyOf:
+                  - type: number
+                  - type: string
+            trigger:
+              type: string
+              description: 触发方式
     patch-jobs-requestbody:
       required:
-      - job
-      - log
+        - log
+        - job
       type: object
       properties:
         log:
-          $ref: '#/components/schemas/postschedulerrequestbody_log'
+          type: object
+          required:
+            - "appId"
+            - "entryId"
+            - "dataId"
+          properties:
+            appId:
+              type: string
+              description: 应用ID
+            entryId:
+              type: string
+              description: 表单ID
+            dataId:
+              type: string
+              description: 数据ID
         job:
-          $ref: '#/components/schemas/patchjobsrequestbody_job'
+          type: object
+          required:
+            - "func"
+            - "args"
+            - "trigger"
+          properties:
+            func:
+              type: string
+              description: 作业函数
+            args:
+              type: array
+              description: 参数列表
+              items: 
+                anyOf:
+                  - type: number
+                  - type: string
+            trigger:
+              type: string
+              description: 触发方式
     jobs-requestbody:
       required:
-      - log
+        - log
       type: object
       properties:
         log:
-          $ref: '#/components/schemas/postschedulerrequestbody_log'
+          type: object
+          required:
+            - "appId"
+            - "entryId"
+            - "dataId"
+          properties:
+            appId:
+              type: string
+              description: 应用ID
+            entryId:
+              type: string
+              description: 表单ID
+            dataId:
+              type: string
+              description: 数据ID
     general-response:
       required:
       - code
@@ -320,66 +385,6 @@ components:
           phone: phone
         success: true
         message: message
-    postschedulerrequestbody_log:
-      required:
-      - appId
-      - dataId
-      - entryId
-      type: object
-      properties:
-        appId:
-          type: string
-          description: 应用ID
-        entryId:
-          type: string
-          description: 表单ID
-        dataId:
-          type: string
-          description: 数据ID
-    postjobsrequestbody_job:
-      required:
-      - args
-      - func
-      - id
-      - trigger
-      type: object
-      properties:
-        id:
-          type: string
-          description: 作业ID
-        func:
-          type: string
-          description: 作业函数
-        args:
-          type: array
-          description: 参数列表
-          items:
-            anyOf:
-            - type: number
-            - type: string
-        trigger:
-          type: string
-          description: 触发方式
-    patchjobsrequestbody_job:
-      required:
-      - args
-      - func
-      - trigger
-      type: object
-      properties:
-        func:
-          type: string
-          description: 作业函数
-        args:
-          type: array
-          description: 参数列表
-          items:
-            anyOf:
-            - type: number
-            - type: string
-        trigger:
-          type: string
-          description: 触发方式
   responses:
     general:
       description: 成功响应请求
@@ -389,10 +394,8 @@ components:
             $ref: '#/components/schemas/general-response'
           examples:
             "200":
-              value: null
               $ref: '#/components/examples/general-200'
             "500":
-              value: null
               $ref: '#/components/examples/general-500'
   examples:
     post-scheduler-requestbody:
@@ -408,14 +411,14 @@ components:
         code: 200
         success: true
         data: {}
-        message: ""
+        message: ''
     general-500:
       description: 成功
       value:
         code: 500
         success: false
         data: {}
-        message: ""
+        message: ''
     post-jobs-requestbody:
       description: 请求体
       value:
@@ -426,10 +429,8 @@ components:
         job:
           id: job1
           func: module.test:task
-          args:
-          - 1
-          - 2
-          trigger: interval
+          args: [1, 2]
+          trigger: "interval"
           seconds: 10
     jobs-requestbody:
       description: 请求体
@@ -447,10 +448,8 @@ components:
           dataId: b310a9f0dc8146df9723b226fa9a2b2d
         job:
           func: module.test:task
-          args:
-          - 1
-          - 2
-          trigger: interval
+          args: [1, 2]
+          trigger: "interval"
           seconds: 10
   requestBodies:
     post-scheduler-pause:
@@ -460,7 +459,6 @@ components:
             $ref: '#/components/schemas/post-scheduler-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/post-scheduler-requestbody'
     post-scheduler-resume:
       content:
@@ -469,7 +467,6 @@ components:
             $ref: '#/components/schemas/post-scheduler-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/post-scheduler-requestbody'
     post-jobs:
       content:
@@ -478,7 +475,6 @@ components:
             $ref: '#/components/schemas/post-jobs-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/post-jobs-requestbody'
     post-jobs-remove:
       content:
@@ -487,7 +483,6 @@ components:
             $ref: '#/components/schemas/jobs-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/jobs-requestbody'
     patch-jobs:
       content:
@@ -496,7 +491,6 @@ components:
             $ref: '#/components/schemas/patch-jobs-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/patch-jobs-requestbody'
     post-jobs-pause:
       content:
@@ -505,7 +499,6 @@ components:
             $ref: '#/components/schemas/jobs-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/jobs-requestbody'
     post-jobs-resume:
       content:
@@ -514,7 +507,6 @@ components:
             $ref: '#/components/schemas/jobs-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/jobs-requestbody'
     post-jobs-run:
       content:
@@ -523,6 +515,4 @@ components:
             $ref: '#/components/schemas/jobs-requestbody'
           examples:
             示例1:
-              value: null
               $ref: '#/components/examples/jobs-requestbody'
-

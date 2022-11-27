@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author : microfat
-# @time   : 11/24/22 09:03:56
+# @time   : 11/27/22 15:58:28
 # @File   : config.py
 
 import datetime
@@ -15,7 +15,7 @@ class Config(object):
     JOBS = [
         {
             'id': 'job1',
-            'func': 'module.test:task',
+            'func': 'swagger_server.jobs.test:task',
             'args': (1, 2),
             'trigger': 'interval',
             'seconds': 10,
@@ -23,6 +23,7 @@ class Config(object):
         }
     ]
     SCHEDULER_API_ENABLED = True
+    SCHEDULER_TIMEZONE = 'Asia/Shanghai'
 
 
 # 接口ip、端口

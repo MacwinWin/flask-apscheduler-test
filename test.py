@@ -22,6 +22,7 @@ class Config(object):
         }
     ]
     SCHEDULER_API_ENABLED = True
+    SCHEDULER_TIMEZONE = 'Asia/Shanghai'
 
 
 def task(a, b):

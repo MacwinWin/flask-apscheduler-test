@@ -7,28 +7,11 @@
 	},
 	"item": [
 		{
-			"name": "获取基本信息",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler"
-					]
-				}
-			},
-			"response": [
+			"name": "原生",
+			"item": [
 				{
 					"name": "获取基本信息",
-					"originalRequest": {
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -45,61 +28,59 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 12:58:14 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "73"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "获取基本信息",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 12:58:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_host\": \"6a1cc3879c58\",\n    \"allowed_hosts\": [\n        \"*\"\n    ],\n    \"running\": true\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"current_host\": \"6a1cc3879c58\",\n    \"allowed_hosts\": [\n        \"*\"\n    ],\n    \"running\": true\n}"
-				}
-			]
-		},
-		{
-			"name": "获取作业详情",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs/job1",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs",
-						"job1"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "获取作业详情",
-					"originalRequest": {
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -118,60 +99,61 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:02:17 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "267"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "获取作业详情",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs/job1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs",
+										"job1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:02:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        1,\n        2\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T20:57:27.662972+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:02:27.662972+08:00\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        1,\n        2\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T20:57:27.662972+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:02:27.662972+08:00\"\n}"
-				}
-			]
-		},
-		{
-			"name": "获取所有作业详情",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "获取所有作业详情",
-					"originalRequest": {
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -189,61 +171,60 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:02:47 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "269"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "获取所有作业详情",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:02:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"job1\",\n        \"name\": \"job1\",\n        \"func\": \"test:task\",\n        \"args\": [\n            1,\n            2\n        ],\n        \"kwargs\": {},\n        \"trigger\": \"interval\",\n        \"start_date\": \"2022-11-20T20:57:27.662972+08:00\",\n        \"seconds\": 10,\n        \"misfire_grace_time\": 1,\n        \"max_instances\": 1,\n        \"next_run_time\": \"2022-11-20T21:02:47.662972+08:00\"\n    }\n]"
 						}
-					],
-					"cookie": [],
-					"body": "[\n    {\n        \"id\": \"job1\",\n        \"name\": \"job1\",\n        \"func\": \"test:task\",\n        \"args\": [\n            1,\n            2\n        ],\n        \"kwargs\": {},\n        \"trigger\": \"interval\",\n        \"start_date\": \"2022-11-20T20:57:27.662972+08:00\",\n        \"seconds\": 10,\n        \"misfire_grace_time\": 1,\n        \"max_instances\": 1,\n        \"next_run_time\": \"2022-11-20T21:02:47.662972+08:00\"\n    }\n]"
-				}
-			]
-		},
-		{
-			"name": "删除作业",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs/job1",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs",
-						"job1"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "删除作业",
-					"originalRequest": {
+					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -262,65 +243,57 @@
 							]
 						}
 					},
-					"status": "NO CONTENT",
-					"code": 204,
-					"_postman_previewlanguage": "html",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:09:41 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "text/html; charset=utf-8"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "删除作业",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs/job1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs",
+										"job1"
+									]
+								}
+							},
+							"status": "NO CONTENT",
+							"code": 204,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:09:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": null
 						}
-					],
-					"cookie": [],
-					"body": null
-				}
-			]
-		},
-		{
-			"name": "新增作业",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [1, 2],\n    \"trigger\": \"interval\",\n    \"seconds\": 10\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "新增作业",
-					"originalRequest": {
+					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -347,75 +320,74 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:14:03 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "267"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "新增作业",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [1, 2],\n    \"trigger\": \"interval\",\n    \"seconds\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:14:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        1,\n        2\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:14:13.217787+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:14:13.217787+08:00\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        1,\n        2\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:14:13.217787+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:14:13.217787+08:00\"\n}"
-				}
-			]
-		},
-		{
-			"name": "修改作业",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"func\": \"test:task\",\n    \"args\": [2, 3],\n    \"trigger\": \"interval\",\n    \"seconds\": 10\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs/job1",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs",
-						"job1"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "修改作业",
-					"originalRequest": {
+					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"func\": \"test:task\",\n    \"args\": [2, 3],\n    \"trigger\": \"interval\",\n    \"seconds\": 10\n}",
+							"raw": "{\n    \"func\": \"swagger_server.jobs.test:task\",\n    \"args\": [2, 3],\n    \"trigger\": \"interval\",\n    \"seconds\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -438,62 +410,70 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:15:21 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "267"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "修改作业",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"func\": \"test:task\",\n    \"args\": [2, 3],\n    \"trigger\": \"interval\",\n    \"seconds\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs/job1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs",
+										"job1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:15:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:15:31.187552+08:00\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:15:31.187552+08:00\"\n}"
-				}
-			]
-		},
-		{
-			"name": "暂停作业",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs/job1/pause",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs",
-						"job1",
-						"pause"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "暂停作业",
-					"originalRequest": {
+					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
@@ -513,62 +493,62 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:16:05 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "237"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "暂停作业",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs/job1/pause",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs",
+										"job1",
+										"pause"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:16:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": null\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": null\n}"
-				}
-			]
-		},
-		{
-			"name": "恢复作业",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs/job1/resume",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs",
-						"job1",
-						"resume"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "恢复作业",
-					"originalRequest": {
+					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
@@ -588,62 +568,62 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:16:56 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "267"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "恢复作业",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs/job1/resume",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs",
+										"job1",
+										"resume"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:16:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:17:01.187552+08:00\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:17:01.187552+08:00\"\n}"
-				}
-			]
-		},
-		{
-			"name": "立即执行作业",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/scheduler/jobs/job1/run",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"scheduler",
-						"jobs",
-						"job1",
-						"run"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "立即执行作业",
-					"originalRequest": {
+					"request": {
 						"method": "POST",
 						"header": [],
 						"url": {
@@ -663,33 +643,301 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.11.0"
-						},
-						{
-							"key": "Date",
-							"value": "Sun, 20 Nov 2022 13:21:26 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "267"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+							"name": "立即执行作业",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/scheduler/jobs/job1/run",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"scheduler",
+										"jobs",
+										"job1",
+										"run"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.2 Python/3.11.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:21:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:21:31.187552+08:00\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"job1\",\n    \"name\": \"job1\",\n    \"func\": \"test:task\",\n    \"args\": [\n        2,\n        3\n    ],\n    \"kwargs\": {},\n    \"trigger\": \"interval\",\n    \"start_date\": \"2022-11-20T21:15:31.187552+08:00\",\n    \"seconds\": 10,\n    \"misfire_grace_time\": 1,\n    \"max_instances\": 1,\n    \"next_run_time\": \"2022-11-20T21:21:31.187552+08:00\"\n}"
+					]
+				}
+			]
+		},
+		{
+			"name": "自编",
+			"item": [
+				{
+					"name": "暂停调度器",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"log\": {\n    \"appId\": \"5b8e39ba111dc526a9845b39\",\n    \"entryId\": \"6358e2ac26d2d8000a641352\",\n    \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/pause",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"pause"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "恢复调度器",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"log\": {\n    \"appId\": \"5b8e39ba111dc526a9845b39\",\n    \"entryId\": \"6358e2ac26d2d8000a641352\",\n    \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/resume",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加作业",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"log\": {\n        \"appId\": \"5b8e39ba111dc526a9845b39\",\n        \"entryId\": \"6358e2ac26d2d8000a641352\",\n        \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n    },\n    \"job\": {\n        \"id\": \"job2\",\n        \"func\": \"swagger_server.jobs.test:task\",\n        \"args\": [\n            2,\n            3\n        ],\n        \"trigger\": \"interval\",\n        \"seconds\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/jobs",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改作业",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"log\": {\n        \"appId\": \"5b8e39ba111dc526a9845b39\",\n        \"entryId\": \"6358e2ac26d2d8000a641352\",\n        \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n    },\n    \"job\": {\n        \"func\": \"swagger_server.jobs.test:task\",\n        \"args\": [\n            1,\n            2\n        ],\n        \"trigger\": \"interval\",\n        \"seconds\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/jobs/job1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"jobs",
+								"job1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "暂停某个作业",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"log\": {\n        \"appId\": \"5b8e39ba111dc526a9845b39\",\n        \"entryId\": \"6358e2ac26d2d8000a641352\",\n        \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/jobs/job1/pause",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"jobs",
+								"job1",
+								"pause"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "恢复某个作业",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"log\": {\n        \"appId\": \"5b8e39ba111dc526a9845b39\",\n        \"entryId\": \"6358e2ac26d2d8000a641352\",\n        \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/jobs/job1/resume",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"jobs",
+								"job1",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "执行某个作业",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"log\": {\n        \"appId\": \"5b8e39ba111dc526a9845b39\",\n        \"entryId\": \"6358e2ac26d2d8000a641352\",\n        \"dataId\": \"b310a9f0dc8146df9723b226fa9a2b2d\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/custom/scheduler/jobs/job1/run",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"custom",
+								"scheduler",
+								"jobs",
+								"job1",
+								"run"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

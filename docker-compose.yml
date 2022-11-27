@@ -3,12 +3,12 @@
 # @File   : docker-compose.yml
 
 services: 
-    falsk-apscheduler-test:
-        image: falsk-apscheduler-test:1.0
-        container_name: falsk-apscheduler-test
+    flask-apscheduler-test:
+        image: flask-apscheduler-test:1.0
+        container_name: flask-apscheduler-test
         build:
             context: .
-            dockerfile: Services/falsk-apscheduler-test/Dockerfile
+            dockerfile: Services/flask-apscheduler-test/Dockerfile
         volumes:
             - logs:/vol
             - ./:/app

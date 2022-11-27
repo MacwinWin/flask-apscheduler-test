@@ -1,6 +1,6 @@
 # flask-apscheduler-test
 
-Demo code testing the effect of combining of flask or connexion wiht flask-apscheduler
+The demo code is used to testing the effect of combining of flask or connexion wiht flask-apscheduler. And contains two types of API, the first one is build-in API, the second one is custom API built by the build-in functions.
 
 ## Deploy
 
@@ -15,7 +15,7 @@ In the root derectory, run the following code:
 Then, enter the container using the following code:
 
 ```bash
->>> docker exec -it falsk-apscheduler-test /bin/bash
+>>> docker exec -it flask-apscheduler-test /bin/bash
 ```
 
 Then, stop the supervisor by the following code:

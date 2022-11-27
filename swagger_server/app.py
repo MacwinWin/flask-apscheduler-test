@@ -13,7 +13,7 @@ sys.path.insert(1, os.getcwd() + '/swagger_server')
 import connexion
 from swagger_server import encoder
 
-import config
+from swagger_server import config
 
 
 app = connexion.App(__name__, specification_dir='./swagger/')
